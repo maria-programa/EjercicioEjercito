@@ -7,14 +7,11 @@ namespace EjercicioEjercito
 {
     public class Unidad : ICaracteristicas
     {
-        public double Velocidad { get ; set ; }
-        public double Blindaje { get ; set ; }
-        public double PotenciaFuego { get ; set; }
         public int Precio { get ; set ; }
+        public IBlindaje blindaje { get; set; }
+        public IVelocidad velocidad { get; set; }
+        public IPotenciaFuego potencia { get; set; }
 
-        public double CapacidadMilitar()
-        {
-            return ((PotenciaFuego * Velocidad) / 2) / (100 - Blindaje);
-        }
+     
     }
 }

@@ -9,6 +9,7 @@ namespace EjercicioEjercito
     public interface IColeccionable
     {
         int ElementosTotales();
+        double CapacidadMilitar();
         public void Add(ICaracteristicas elemento);
     }
 }

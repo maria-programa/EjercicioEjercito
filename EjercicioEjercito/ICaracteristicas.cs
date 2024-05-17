@@ -8,11 +8,11 @@ namespace EjercicioEjercito
 {
     public interface ICaracteristicas
     {
-        double Velocidad { get; set; }
-        double Blindaje { get; set; }
-        double PotenciaFuego { get; set; }
+        IBlindaje blindaje { get; set; }
+        IVelocidad velocidad { get; set; }
+        IPotenciaFuego potencia { get; set; }
         int Precio {  get; set; }
-        double CapacidadMilitar();
+
 
     }
 }

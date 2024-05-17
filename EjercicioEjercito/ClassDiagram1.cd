@@ -1,15 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="EjercicioEjercito.Coleccion">
-    <Position X="9" Y="2.5" Width="1.5" />
+    <Position X="4" Y="2.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>ABoAAAAAAAAAAAAAAgAECAQQACAAAAACEUAAAAAAEAA=</HashCode>
+      <HashCode>ABoAAAAEAAAAAAAAAgAECAQQAGAQAAAAEUAAAAAAEAA=</HashCode>
       <FileName>Coleccion.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="EjercicioEjercito.Fabrica">
-    <Position X="3.25" Y="2.75" Width="1.5" />
+    <Position X="0.5" Y="2.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Fabrica.cs</FileName>
@@ -17,36 +17,105 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="EjercicioEjercito.Unidad">
-    <Position X="11.5" Y="3.25" Width="1.5" />
+    <Position X="5.75" Y="3.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAgAAAAAAAAAAAAAAAAAAAQQACAAAAAAEAAAAAAAAAA=</HashCode>
+      <HashCode>AEAAAAAAAAAAAAAABAAAAAAQAAAAAAAAAAAAAAAIAAA=</HashCode>
       <FileName>Unidad.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Interface Name="EjercicioEjercito.ICaracteristicas">
-    <Position X="11.5" Y="0.5" Width="1.5" />
+  <Class Name="EjercicioEjercito.SeMueve">
+    <Position X="8.5" Y="2.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAgAAAAAAAAAAAAAAAAAAAQQACAAAAAAEAAAAAAAAAA=</HashCode>
-      <FileName>ICaracteristicas.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>SeMueve.cs</FileName>
     </TypeIdentifier>
-  </Interface>
-  <Interface Name="EjercicioEjercito.IColeccionable">
-    <Position X="9" Y="0.5" Width="1.5" />
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="EjercicioEjercito.NoSeMueve">
+    <Position X="8.5" Y="3.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAIAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>NoSeMueve.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="EjercicioEjercito.EstaBlindado">
+    <Position X="11" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>EstaBlindado.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="EjercicioEjercito.NoEstaBlindado">
+    <Position X="11" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>NoEstaBlindado.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="EjercicioEjercito.Dispara">
+    <Position X="13.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Dispara.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="EjercicioEjercito.NoDispara">
+    <Position X="13.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>NoDispara.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="EjercicioEjercito.IColeccionable">
+    <Position X="4" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAAAgAAAAAAAAAAAAAAEAAAAAAAAAA=</HashCode>
       <FileName>IColeccionable.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="EjercicioEjercito.IFabricaElementos">
-    <Position X="3.25" Y="1.25" Width="1.5" />
+    <Position X="0.5" Y="0.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>IFabricaElementos.cs</FileName>
     </TypeIdentifier>
   </Interface>
+  <Interface Name="EjercicioEjercito.IVelocidad">
+    <Position X="8.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IVelocidad.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="EjercicioEjercito.IBlindaje">
+    <Position X="11" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IBlindaje.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="EjercicioEjercito.IPotenciaFuego">
+    <Position X="13.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IPotenciaFuego.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="EjercicioEjercito.ICaracteristicas">
+    <Position X="5.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAAAAAAAAhAAAAAAQAAAAAAAAAAAAAAAIAAA=</HashCode>
+      <FileName>ICaracteristicas.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
   <Enum Name="EjercicioEjercito.TipoElementos">
-    <Position X="5.25" Y="1.25" Width="1.5" />
+    <Position X="2.25" Y="0.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAgEAAAABAAAAAAAAAAAAAAAAIgCCAAAAAAAAAEIAA=</HashCode>
       <FileName>TipoElementos.cs</FileName>
