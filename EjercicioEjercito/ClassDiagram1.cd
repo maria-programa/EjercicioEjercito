@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="EjercicioEjercito.Coleccion">
+    <Position X="9" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABoAAAAAAAAAAAAAAgAECAQQACAAAAACEUAAAAAAEAA=</HashCode>
+      <FileName>Coleccion.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="EjercicioEjercito.Fabrica">
+    <Position X="3.25" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Fabrica.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="EjercicioEjercito.Unidad">
+    <Position X="11.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAAAAAAAAAAAAAAQQACAAAAAAEAAAAAAAAAA=</HashCode>
+      <FileName>Unidad.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="EjercicioEjercito.ICaracteristicas">
+    <Position X="11.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAAAAAAAAAAAAAAQQACAAAAAAEAAAAAAAAAA=</HashCode>
+      <FileName>ICaracteristicas.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="EjercicioEjercito.IColeccionable">
+    <Position X="9" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IColeccionable.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="EjercicioEjercito.IFabricaElementos">
+    <Position X="3.25" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IFabricaElementos.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="EjercicioEjercito.TipoElementos">
+    <Position X="5.25" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgEAAAABAAAAAAAAAAAAAAAAIgCCAAAAAAAAAEIAA=</HashCode>
+      <FileName>TipoElementos.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
