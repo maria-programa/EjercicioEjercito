@@ -21,9 +21,9 @@ namespace EjercicioEjercito
         {
             caracteristicas.Add(elemento);
             numElementos++;
-            //potenciaFuegoTotal += elemento.PotenciaFuego;
-            //blindajeTotal += elemento.Blindaje;
-            //velocidadTotal += elemento.Velocidad;
+            potenciaFuegoTotal += elemento.potencia.PotenciaFuego;
+            blindajeTotal += elemento.blindaje.Blindaje;
+            velocidadTotal += elemento.velocidad.Velocidad;
             precioTotal += elemento.Precio;
         }
         public double CapacidadMilitar()
@@ -34,12 +34,10 @@ namespace EjercicioEjercito
         {
             return numElementos;
         }
-
-
         public int Precio { get { return precioTotal; } set { } }
 
-        public IBlindaje blindaje { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public IVelocidad velocidad { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public IPotenciaFuego potencia { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public IBlindaje blindaje { get; set; } 
+        public IVelocidad velocidad { get ; set ; }
+        public IPotenciaFuego potencia { get ; set ; }
     }
 }

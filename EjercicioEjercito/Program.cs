@@ -6,17 +6,17 @@ using System.Runtime.CompilerServices;
 IFabricaElementos MiFabrica = new Fabrica();
 IColeccionable MiEjercito = new Coleccion();
 
-MiEjercito.Add(MiFabrica.DameElemento(TipoElementos.Tanque));
-MiEjercito.Add(MiFabrica.DameElemento(TipoElementos.Sanitario));
-MiEjercito.Add(MiFabrica.DameElemento(TipoElementos.Ametrallador));
+MiEjercito.Add(MiFabrica.DameElemento(TipoElementos.TransporteMX));
+//MiEjercito.Add(MiFabrica.DameElemento(TipoElementos.Sanitario));
+//MiEjercito.Add(MiFabrica.DameElemento(TipoElementos.Ametrallador));
 MiEjercito.Add(MiFabrica.DameElemento(TipoElementos.TransporteMX));
 
 Console.WriteLine($"El ejercito tiene {MiEjercito.ElementosTotales()} elementos");
-Console.WriteLine($"Su potencia de fuego es de {((ICaracteristicas)MiEjercito).PotenciaFuego}");
-Console.WriteLine($"Su blindaje es de {((ICaracteristicas)MiEjercito).Blindaje}");
-Console.WriteLine($"La velocidad total es {((ICaracteristicas)MiEjercito).Velocidad}");
+Console.WriteLine($"Su potencia de fuego es de {((ICaracteristicas)MiEjercito).potencia.PotenciaFuego}");
+Console.WriteLine($"Su blindaje es de {((ICaracteristicas)MiEjercito).blindaje.Blindaje}");
+Console.WriteLine($"La velocidad total es {((ICaracteristicas)MiEjercito).velocidad.Velocidad}");
 Console.WriteLine($"Se ha gastado en total {((ICaracteristicas)MiEjercito).Precio} euros");
-Console.WriteLine($"Tiene una Capacidad Militar de {((ICaracteristicas)MiEjercito).CapacidadMilitar()}");
+Console.WriteLine($"Tiene una Capacidad Militar de {MiEjercito.CapacidadMilitar()}");
    
 
 //-OPCION2
