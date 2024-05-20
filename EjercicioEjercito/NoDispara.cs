@@ -7,6 +7,6 @@ namespace EjercicioEjercito
 {
     public class NoDispara : IPotenciaFuego
     {
-        public double PotenciaFuego { get; set; }
+        public double PotenciaFuego { get; set; } = 0;
     }
 }

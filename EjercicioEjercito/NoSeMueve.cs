@@ -7,6 +7,6 @@ namespace EjercicioEjercito
 {
     public class NoSeMueve : IVelocidad
     {
-        public double Velocidad { get ; set ; }
+        public double Velocidad { get; set; } = 0;
     }
 }

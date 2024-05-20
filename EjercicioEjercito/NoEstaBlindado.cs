@@ -7,6 +7,6 @@ namespace EjercicioEjercito
 {
     public class NoEstaBlindado : IBlindaje
     {
-        public double Blindaje { get; set; }
+        public double Blindaje { get; set; } = 0;
     }
 }

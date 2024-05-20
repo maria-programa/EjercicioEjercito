@@ -7,46 +7,21 @@ IFabricaElementos MiFabrica = new Fabrica();
 IColeccionable MiEjercito = new Coleccion();
 
 MiEjercito.Add(MiFabrica.DameElemento(TipoElementos.TransporteMX));
-//MiEjercito.Add(MiFabrica.DameElemento(TipoElementos.Sanitario));
-//MiEjercito.Add(MiFabrica.DameElemento(TipoElementos.Ametrallador));
+MiEjercito.Add(MiFabrica.DameElemento(TipoElementos.Sanitario));
+MiEjercito.Add(MiFabrica.DameElemento(TipoElementos.Ametrallador));
 MiEjercito.Add(MiFabrica.DameElemento(TipoElementos.TransporteMX));
 
 Console.WriteLine($"El ejercito tiene {MiEjercito.ElementosTotales()} elementos");
-Console.WriteLine($"Su potencia de fuego es de {((ICaracteristicas)MiEjercito).potencia.PotenciaFuego}");
-Console.WriteLine($"Su blindaje es de {((ICaracteristicas)MiEjercito).blindaje.Blindaje}");
-Console.WriteLine($"La velocidad total es {((ICaracteristicas)MiEjercito).velocidad.Velocidad}");
+Console.WriteLine($"Su potencia de fuego es de {((ICaracteristicas)MiEjercito).potencia}");
+Console.WriteLine($"Su blindaje es de {((ICaracteristicas)MiEjercito).blindaje}");
+Console.WriteLine($"La velocidad total es {((ICaracteristicas)MiEjercito).velocidad}");
 Console.WriteLine($"Se ha gastado en total {((ICaracteristicas)MiEjercito).Precio} euros");
 Console.WriteLine($"Tiene una Capacidad Militar de {MiEjercito.CapacidadMilitar()}");
    
 
+
+
 //-OPCION2
-//Console.WriteLine("Elija el elemento:");
-//Console.WriteLine("1. MX-7899");
-//Console.WriteLine("2. Tanque de ataque Sombras-VB98");
-//Console.WriteLine("3. TAXIN-66");
-//Console.WriteLine("4. Infanteria Basica");
-//Console.WriteLine("5. Ametrallador");
-//Console.WriteLine("6. Sanitario");
-//Console.WriteLine("7. Cañon antiaereo");
-//Console.WriteLine("8. Torpedero Movil");
-//Console.WriteLine("9. Cañon");
-//Console.WriteLine("0. Salir");
-//int entrada = 1;
-//while (entrada != 0)
-//{
-//    Console.Write("Elemento: ");
-//    entrada = Int32.Parse(Console.ReadLine());
-//    Console.WriteLine($"{MiFabrica.DameElemento((TipoElementos)entrada)}");
-//}
-
-//Console.WriteLine($"El ejercito tiene {MiEjercito.ElementosTotales()} elementos");
-//Console.WriteLine($"Su potencia de fuego es de {MiEjercito.PotenciaFuegoTotal()}");
-//Console.WriteLine($"Su blindaje es de {MiEjercito.BlindajeTotal()}");
-//Console.WriteLine($"La velocidad total es {MiEjercito.VelocidadTotal()}");
-//Console.WriteLine($"Se ha gastado en total {MiEjercito.PrecioTotal()} euros");
-//Console.WriteLine($"Tiene una Capacidad Militar de {MiEjercito.CapacidadMilitarTotal()}");
-
-//-OPCION3
 //IFabricaElementos MiFabrica = new Fabrica();
 //IColeccionable MiEjercito = new Coleccion();
 //string[] opciones = {"Salir",

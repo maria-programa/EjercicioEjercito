@@ -9,12 +9,11 @@ namespace EjercicioEjercito
     public class Coleccion : IColeccionable, ICaracteristicas
     {
         public List<ICaracteristicas> caracteristicas = new List<ICaracteristicas>();
-        int numElementos = 0;
-        double potenciaFuegoTotal = 0;
-        double blindajeTotal = 0;
-        double velocidadTotal = 0;
-        int precioTotal = 0;
-
+        public int numElementos = 0;
+        public double potenciaFuegoTotal = 0;
+        public double blindajeTotal = 0;
+        public double velocidadTotal = 0;
+        public int precioTotal = 0;
 
 
         public void Add(ICaracteristicas elemento)
@@ -27,7 +26,7 @@ namespace EjercicioEjercito
             precioTotal += elemento.Precio;
         }
         public double CapacidadMilitar()
-        {           
+        {
             return ((potenciaFuegoTotal * velocidadTotal) / 2) / (100 - blindajeTotal);
         }
         public int ElementosTotales()
@@ -36,8 +35,8 @@ namespace EjercicioEjercito
         }
         public int Precio { get { return precioTotal; } set { } }
 
-        public IBlindaje blindaje { get; set; } 
-        public IVelocidad velocidad { get ; set ; }
+        public IBlindaje blindaje { get; set; }
+        public IVelocidad velocidad { get; set; }
         public IPotenciaFuego potencia { get ; set ; }
     }
 }
