@@ -10,6 +10,10 @@ namespace EjercicioEjercito
     {
         int ElementosTotales();
         double CapacidadMilitar();
+        double PotenciaFuegoTotal();
+        double VelocidadTotal();
+        double BlindajeTotal();
+        int PrecioTotal();
         public void Add(ICaracteristicas elemento);
     }
 }

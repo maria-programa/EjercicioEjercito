@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EjercicioEjercito
 {
-    public class Coleccion : IColeccionable, ICaracteristicas
+    public class Coleccion : IColeccionable
     {
         public List<ICaracteristicas> caracteristicas = new List<ICaracteristicas>();
         public int numElementos = 0;
@@ -25,6 +25,12 @@ namespace EjercicioEjercito
             velocidadTotal += elemento.velocidad.Velocidad;
             precioTotal += elemento.Precio;
         }
+
+        public double BlindajeTotal()
+        {
+            return blindajeTotal;
+        }
+
         public double CapacidadMilitar()
         {
             return ((potenciaFuegoTotal * velocidadTotal) / 2) / (100 - blindajeTotal);
@@ -33,10 +39,20 @@ namespace EjercicioEjercito
         {
             return numElementos;
         }
-        public int Precio { get { return precioTotal; } set { } }
 
-        public IBlindaje blindaje { get; set; }
-        public IVelocidad velocidad { get; set; }
-        public IPotenciaFuego potencia { get ; set ; }
+        public double PotenciaFuegoTotal()
+        {
+            return potenciaFuegoTotal;
+        }
+
+        public int PrecioTotal()
+        {
+            return precioTotal;
+        }
+
+        public double VelocidadTotal()
+        {
+            return velocidadTotal;
+        }
     }
 }
