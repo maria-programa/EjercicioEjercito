@@ -19,3 +19,5 @@ namespace EjercicioEjercito
         Canon = 9
     }
 }
+
+//"MX-7899", "Tanque de ataque Sombras-VB98", "TAXIN-66", "Infanteria Basica", "Ametrallador", "Sanitario", "Cañon antiaereo", "Torpedero Movil", "Cañon"
