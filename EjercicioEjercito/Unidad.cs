@@ -7,12 +7,12 @@ namespace EjercicioEjercito
 {
     public class Unidad : ICaracteristicas
     {
-        public int Precio { get ; set ; }
+        public int Precio { get; set; }
         public IBlindaje blindaje { get; set; }
         public IVelocidad velocidad { get; set; }
-        public IPotenciaFuego potencia { get; set; } 
+        public IPotenciaFuego potencia { get; set; }
     }
-    
+
     public class SuperPiloto : ICaracteristicas
     {
         ICaracteristicas Piloto;

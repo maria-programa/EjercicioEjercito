@@ -32,6 +32,8 @@ IColeccionable MiEjercito02 = new Coleccion();
 string[] opciones = { "MX-7899", "Tanque de ataque Sombras-VB98", "TAXIN-66", "Infanteria Basica", "Ametrallador", "Sanitario", "Cañon antiaereo", "Torpedero Movil", "Cañon", "¿Quiere saber los datos importantes hasta ahora?" };
 int presupuesto;
 int opcion;
+int entrada;
+int mejora;
 
 Console.WriteLine("Buenos días general. Configure su ejercito.\n");
 Console.WriteLine("¿Con cuánto presupuesto contamos hoy?\n");
@@ -52,25 +54,36 @@ do
             Console.WriteLine("Adios");
             Environment.Exit(0);
             break;
-        case 1: Escribe(TipoElementos.TransporteMX);
+        case 1:
+            Escribe(TipoElementos.TransporteMX);
+            //HazloTocho(TipoElementos.TransporteMX);
             break;
-        case 2: Escribe(TipoElementos.Tanque);
+        case 2:
+            Escribe(TipoElementos.Tanque);
             break;
-        case 3: Escribe(TipoElementos.TransporteRapido);
+        case 3:
+            Escribe(TipoElementos.TransporteRapido);
             break;
-        case 4: Escribe(TipoElementos.Infanteria);
+        case 4:
+            Escribe(TipoElementos.Infanteria);
             break;
-        case 5: Escribe(TipoElementos.Ametrallador);
+        case 5:
+            Escribe(TipoElementos.Ametrallador);
             break;
-        case 6: Escribe(TipoElementos.Sanitario);
+        case 6:
+            Escribe(TipoElementos.Sanitario);
             break;
-        case 7: Escribe(TipoElementos.CanonAntiaereo);
+        case 7:
+            Escribe(TipoElementos.CanonAntiaereo);
             break;
-        case 8: Escribe(TipoElementos.Torpedero);
+        case 8:
+            Escribe(TipoElementos.Torpedero);
             break;
-        case 9: Escribe(TipoElementos.Canon);
+        case 9:
+            Escribe(TipoElementos.Canon);
             break;
-        case 10: Datos();
+        case 10:
+            Datos();
             break;
     }
 } while (opcion != 0);
@@ -82,10 +95,50 @@ void Escribe(TipoElementos tipo)
     ICaracteristicas MiUnidad = MiFabrica02.DameElemento(tipo);
     if (presupuesto > MiUnidad.Precio)
     {
-        MiEjercito02.Add(MiUnidad);
+        
         Console.WriteLine($"{tipo}");
-        presupuesto -= MiUnidad.Precio;
-        Console.WriteLine($"Le quedan {presupuesto} euros para gastar\n");
+       
+
+        Console.WriteLine("¿Dese añadirle alguna mejora?\n1.- Si\n2.- No");
+        entrada = Int32.Parse(Console.ReadLine());
+
+        if (entrada == 1)
+        {
+            Console.WriteLine("Elija la mejora:\n1.- Super Piloto\n2.- Movimiento por Desierto\n3.- Super Bomba");
+            mejora = Int32.Parse(Console.ReadLine());
+            switch (mejora)
+            {
+                case 1:
+                    MiUnidad = new SuperPiloto(MiUnidad);
+                    MiEjercito02.Add(MiUnidad);
+                    Console.WriteLine("Su unidad ha sido mejorada");
+                    presupuesto -= MiUnidad.Precio;
+                    Console.WriteLine($"Le quedan {presupuesto} euros para gastar\n");
+                    break;
+                case 2:
+                    MiUnidad = new Desierto(MiUnidad);
+                    MiEjercito02.Add(MiUnidad);
+                    Console.WriteLine("Su unidad ha sido mejorada");
+                    presupuesto -= MiUnidad.Precio;
+                    Console.WriteLine($"Le quedan {presupuesto} euros para gastar\n");
+                    break;
+                case 3:
+                    MiUnidad = new SuperBomba(MiUnidad);
+                    MiEjercito02.Add(MiUnidad);
+                    Console.WriteLine("Su unidad ha sido mejorada");
+                    presupuesto -= MiUnidad.Precio;
+                    Console.WriteLine($"Le quedan {presupuesto} euros para gastar\n");
+                    break;
+            }
+            
+        }
+        else
+        {
+            MiEjercito02.Add(MiUnidad);
+            presupuesto -= MiUnidad.Precio;
+            Console.WriteLine($"Le quedan {presupuesto} euros para gastar\n");
+            Console.WriteLine("Continue");
+        }
     }
     else
     {
@@ -99,3 +152,5 @@ void Datos()
         $"Su blindaje es de {MiEjercito02.BlindajeTotal()}\n" +
         $"La velocidad total es {MiEjercito02.VelocidadTotal()} \nSe ha gastado en total {MiEjercito02.PrecioTotal()} euros \nTiene una Capacidad Militar de {MiEjercito02.CapacidadMilitar()}");
 }
+
+
