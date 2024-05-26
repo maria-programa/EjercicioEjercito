@@ -44,19 +44,18 @@ for (int i = 0; i < opciones.Length; i++)
 {
     Console.WriteLine(i + 1 + ". " + opciones[i]);
 }
-Console.WriteLine("0. Salir");
+Console.WriteLine("0. Salir\n");
 do
 {
     opcion = Int32.Parse(Console.ReadLine());
     switch (opcion)
     {
         case 0:
-            Console.WriteLine("Adios");
+            Console.WriteLine("\nAdios");
             Environment.Exit(0);
             break;
         case 1:
             Escribe(TipoElementos.TransporteMX);
-            //HazloTocho(TipoElementos.TransporteMX);
             break;
         case 2:
             Escribe(TipoElementos.Tanque);
@@ -96,38 +95,38 @@ void Escribe(TipoElementos tipo)
     if (presupuesto > MiUnidad.Precio)
     {
         
-        Console.WriteLine($"{tipo}");
+        Console.WriteLine($"\n{tipo}");
        
 
-        Console.WriteLine("¿Dese añadirle alguna mejora?\n1.- Si\n2.- No");
+        Console.WriteLine("\n¿Dese añadirle alguna mejora?\n1.- Si\n2.- No\n");
         entrada = Int32.Parse(Console.ReadLine());
 
         if (entrada == 1)
         {
-            Console.WriteLine("Elija la mejora:\n1.- Super Piloto\n2.- Movimiento por Desierto\n3.- Super Bomba");
+            Console.WriteLine("\nElija la mejora:\n1.- Super Piloto\n2.- Movimiento por Desierto\n3.- Super Bomba\n");
             mejora = Int32.Parse(Console.ReadLine());
             switch (mejora)
             {
                 case 1:
                     MiUnidad = new SuperPiloto(MiUnidad);
                     MiEjercito02.Add(MiUnidad);
-                    Console.WriteLine("Su unidad ha sido mejorada");
+                    Console.WriteLine("\nSu unidad ha sido mejorada");
                     presupuesto -= MiUnidad.Precio;
-                    Console.WriteLine($"Le quedan {presupuesto} euros para gastar\n");
+                    Console.WriteLine($"\nLe quedan {presupuesto} euros para gastar\n");
                     break;
                 case 2:
                     MiUnidad = new Desierto(MiUnidad);
                     MiEjercito02.Add(MiUnidad);
-                    Console.WriteLine("Su unidad ha sido mejorada");
+                    Console.WriteLine("\nSu unidad ha sido mejorada");
                     presupuesto -= MiUnidad.Precio;
-                    Console.WriteLine($"Le quedan {presupuesto} euros para gastar\n");
+                    Console.WriteLine($"\nLe quedan {presupuesto} euros para gastar\n");
                     break;
                 case 3:
                     MiUnidad = new SuperBomba(MiUnidad);
                     MiEjercito02.Add(MiUnidad);
-                    Console.WriteLine("Su unidad ha sido mejorada");
+                    Console.WriteLine("\nSu unidad ha sido mejorada");
                     presupuesto -= MiUnidad.Precio;
-                    Console.WriteLine($"Le quedan {presupuesto} euros para gastar\n");
+                    Console.WriteLine($"\nLe quedan {presupuesto} euros para gastar\n");
                     break;
             }
             
@@ -136,21 +135,21 @@ void Escribe(TipoElementos tipo)
         {
             MiEjercito02.Add(MiUnidad);
             presupuesto -= MiUnidad.Precio;
-            Console.WriteLine($"Le quedan {presupuesto} euros para gastar\n");
-            Console.WriteLine("Continue");
+            Console.WriteLine($"\nLe quedan {presupuesto} euros para gastar\n");
+            Console.WriteLine("Continue\n");
         }
     }
     else
     {
-        Console.WriteLine("Parece que no dispone del presupuesto necesario.");
+        Console.WriteLine("\nParece que no dispone del presupuesto necesario.\n");
     }
 }
 
 void Datos()
 {
-    Console.WriteLine($"El ejercito tiene {MiEjercito02.ElementosTotales()} elementos \nSu potencia de fuego es de {MiEjercito02.PotenciaFuegoTotal()} \n" +
+    Console.WriteLine($"\nEl ejercito tiene {MiEjercito02.ElementosTotales()} elementos \nSu potencia de fuego es de {MiEjercito02.PotenciaFuegoTotal()} \n" +
         $"Su blindaje es de {MiEjercito02.BlindajeTotal()}\n" +
-        $"La velocidad total es {MiEjercito02.VelocidadTotal()} \nSe ha gastado en total {MiEjercito02.PrecioTotal()} euros \nTiene una Capacidad Militar de {MiEjercito02.CapacidadMilitar()}");
+        $"La velocidad total es {MiEjercito02.VelocidadTotal()} \nSe ha gastado en total {MiEjercito02.PrecioTotal()} euros \nTiene una Capacidad Militar de {MiEjercito02.CapacidadMilitar()}\n");
 }
 
 
