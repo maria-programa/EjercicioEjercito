@@ -68,6 +68,7 @@ namespace EjercicioEjercito
                     elemento.velocidad = new SeMueve() { Velocidad = 3 };
                     elemento.Precio = 1350;
                     break;
+
                 case TipoElementos.Canon:
                     elemento.blindaje = new NoEstaBlindado();
                     elemento.potencia = new Dispara() { PotenciaFuego = 14 };
