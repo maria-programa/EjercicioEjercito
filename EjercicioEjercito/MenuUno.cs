@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EjercicioEjercito
 {
-    internal class MenuUno : IMenuable
+    internal class MenuUno : IMenu
     {
         public void DameMenu()
         {
@@ -14,13 +14,9 @@ namespace EjercicioEjercito
             IColeccionable MiEjercito02 = new Coleccion();
 
             string[] opciones = { "MX-7899", "Tanque de ataque Sombras-VB98", "TAXIN-66", "Infanteria Basica", "Ametrallador", "Sanitario", "Cañon antiaereo", "Torpedero Movil", "Cañon", "¿Quiere saber los datos importantes hasta ahora?" };
-            int presupuesto;
-            int opcion;
-            int entrada;
-            int mejora;
+            int presupuesto, opcion, entrada, mejora;
 
-            Console.WriteLine("Buenos días general. Configure su ejercito.\n");
-            Console.WriteLine("¿Con cuánto presupuesto contamos hoy?\n");
+            Console.WriteLine("Buenos días general. Configure su ejercito.\n¿Con cuánto presupuesto contamos hoy?\n");
             presupuesto = Int32.Parse(Console.ReadLine());
             Console.WriteLine("\nPor favor, seleccione las opciones que guste.\n");
 
@@ -35,7 +31,7 @@ namespace EjercicioEjercito
                 switch (opcion)
                 {
                     case 0:
-                        Console.WriteLine("\nAdios");
+                        Console.WriteLine("\nAdiós");
                         Environment.Exit(0);
                         break;
                     case > 0 and < 10:
@@ -55,7 +51,7 @@ namespace EjercicioEjercito
                 {
                     Console.WriteLine($"\n{tipo}");
 
-                    Console.WriteLine("\n¿Dese añadirle alguna mejora?\n1.- Si\n2.- No\n");
+                    Console.WriteLine("\n¿Desea añadirle alguna mejora?\n1.- Si\n2.- No\n");
                     entrada = Int32.Parse(Console.ReadLine());
 
                     if (entrada == 1)
@@ -88,7 +84,8 @@ namespace EjercicioEjercito
                 }
                 else
                 {
-                    Console.WriteLine("\nParece que no dispone del presupuesto necesario.\n");
+                    Console.WriteLine("\nParece que no dispone del presupuesto necesario.\nAdiós");
+                    Environment.Exit(0);
                 }
             }
 
@@ -102,9 +99,9 @@ namespace EjercicioEjercito
 
             void Datos()
             {
-                Console.WriteLine($"\nEl ejercito tiene {MiEjercito02.ElementosTotales()} elementos \nSu potencia de fuego es de {MiEjercito02.PotenciaFuegoTotal()} \n" +
-                    $"Su blindaje es de {MiEjercito02.BlindajeTotal()}\n" +
-                    $"La velocidad total es {MiEjercito02.VelocidadTotal()} \nSe ha gastado en total {MiEjercito02.PrecioTotal()} euros \nTiene una Capacidad Militar de {MiEjercito02.CapacidadMilitar()}\n");
+                Console.WriteLine($"\nEl ejército tiene {MiEjercito02.ElementosTotales()} elementos.\nSu potencia de fuego es de {MiEjercito02.PotenciaFuegoTotal()}.\n" +
+                    $"Su blindaje es de {MiEjercito02.BlindajeTotal()}.\n" +
+                    $"La velocidad total es {MiEjercito02.VelocidadTotal()}.\nSe ha gastado un total de {MiEjercito02.PrecioTotal()} euros.\nTiene una Capacidad Militar de {MiEjercito02.CapacidadMilitar()}.\n");
             }
         }
     }

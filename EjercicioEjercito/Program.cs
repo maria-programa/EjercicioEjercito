@@ -26,7 +26,7 @@ using System.Runtime.CompilerServices;
 
 //-OPCION2 MEDIANTE CONSOLA
 
-IMenuable MiMenu = new MenuUno();
+IMenu MiMenu = new MenuUno();
 
 do { MiMenu.DameMenu(); } while (true);
 

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EjercicioEjercito
 {
-    public interface IMenuable
+    public interface IMenu
     {
         public void DameMenu();
     }

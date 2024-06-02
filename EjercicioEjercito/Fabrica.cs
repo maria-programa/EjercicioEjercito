@@ -11,6 +11,24 @@ namespace EjercicioEjercito
         public ICaracteristicas DameElemento(TipoElementos tipo)
         {
             ICaracteristicas elemento = new Unidad();
+
+            //IBlindaje[] blindaje =
+            //    [new EstaBlindado() { Blindaje = 1.4 }, new EstaBlindado() { Blindaje = 4.8 }, new NoEstaBlindado(),
+            //    new NoEstaBlindado(), new NoEstaBlindado(), new EstaBlindado() { Blindaje = 5 },
+            //    new NoEstaBlindado(), new EstaBlindado() { Blindaje = 2 }, new NoEstaBlindado()];
+
+            //IPotenciaFuego[] potencia =
+            //    [new NoDispara(), new Dispara() { PotenciaFuego = 9.8 }, new NoDispara(),
+            //    new Dispara() { PotenciaFuego = 7 }, new Dispara() { PotenciaFuego = 10 }, new NoDispara(),
+            //    new Dispara() { PotenciaFuego = 22 }, new Dispara() { PotenciaFuego = 19 }, new Dispara() { PotenciaFuego = 14 }];
+            
+            //IVelocidad[] velocidad =
+            //    [new SeMueve() { Velocidad = 4.5 }, new SeMueve() { Velocidad = 7.3 }, new SeMueve() { Velocidad = 12 },
+            //    new SeMueve() { Velocidad = 6 }, new SeMueve() { Velocidad = 4 }, new SeMueve() { Velocidad = 7 },
+            //    new SeMueve() { Velocidad = 1 }, new SeMueve() { Velocidad = 3 }, new NoSeMueve()];
+            
+            //int[] Precio = [4200, 15600, 1600, 250, 400, 500, 1100, 1350, 1100];
+
             switch (tipo)
             {
                 case TipoElementos.TransporteMX:
@@ -21,12 +39,12 @@ namespace EjercicioEjercito
                     break;
 
                 case TipoElementos.Tanque:
-                    elemento.blindaje = new EstaBlindado() { Blindaje = 4.8};
+                    elemento.blindaje = new EstaBlindado() { Blindaje = 4.8 };
                     elemento.potencia = new Dispara() { PotenciaFuego = 9.8 };
                     elemento.velocidad = new SeMueve() { Velocidad = 7.3 };
                     elemento.Precio = 15600;
                     break;
-                    
+
                 case TipoElementos.TransporteRapido:
                     elemento.blindaje = new NoEstaBlindado();
                     elemento.potencia = new NoDispara();
